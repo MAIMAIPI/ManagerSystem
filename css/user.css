@@ -150,7 +150,7 @@ a:visited{
     word-wrap: break-word;
     padding-top: 10px;
 }
-.brush-list .catog-points span {
+.brush-list .catog-points .span-common {
     display: inline-block;
     width: 140px;
 }
@@ -393,7 +393,6 @@ ol, ul {
 .west ul li {
     height: 70px;
     border-bottom: 1px solid #EDF1F2;
-    width: 180px;
     margin: 0 auto;
 }
 .west ul a.actived {
