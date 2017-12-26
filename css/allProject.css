@@ -1,13 +1,3 @@
-.allProject_banner{
-    background: url(../images/2.jpg)no-repeat center top;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-height:250px;
-    text-align: center;
-    padding: 3em 0 0 0;
-}
 .allProject_main{
     padding: 5em 0;
 }
@@ -82,4 +72,21 @@
 }
 .project_list .event_pagination{
     margin: 20px;
+}
+/*切换DIV*/
+.contents{
+    z-index: 0;
+    opacity: 0;
+    display: none;
+}
+.contents-checked{
+    display: block;
+    z-index: 1;
+    opacity: 1;
+}
+/*a.list-item-checked{*/
+    /*color: red;*/
+/*}*/
+.west ul .list-item-checked a{
+    color: #F01400;
 }

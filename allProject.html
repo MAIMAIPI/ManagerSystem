@@ -146,12 +146,13 @@
     </div>
 </nav>
 <!-- banner -->
-<div class="allProject_banner">
+<div class="courses_banner">
     <div class="container">
-        <h3>所有信息</h3>
+        <h3>项目管理展示</h3>
         <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum
-            tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.
+            Welcome to join JSUCCW! Here we will meet a group of like-minded students,
+            grow together, learn professional knowledge, I hope everyone here can meet better myself. Finally, I wish
+            you all success!
         </p>
         <div class="breadcrumb1">
             <ul>
@@ -168,35 +169,103 @@
             <div class="leftmain">
                 <div class="west">
                     <ul>
-                        <li class="account1">
-                            <a id="west1" class="actived">
+                        <li class=" list-item list-item-checked">
+                            <a>
                                 <i class="fa fa-tasks"></i><span>17年下</span><i class="fa fa-angle-down"></i>
                             </a>
                         </li>
-                        <div class="submenu1" style="display: none; ">
+                        <div class="contents contents-checked" >
                             <ul class="root">
-                                <li>
-                                    <a index="1" class="actived" onclick="change_div('dynamicall')">
+                                <li class="list-item1 list-item-checked1">
+                                    <a>
+                                        <i class="fa fa-leaf"></i><span>全部</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="list-item1">
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>17级</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="list-item1">
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>16级</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li >
+                                <li class="list-item1">
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>15级</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="list-item1">
+                                    <a>
+                                        <i class="fa fa-leaf"></i><span>15级以前</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li class=" list-item">
+                            <a>
+                                <i class="fa fa-tasks"></i><span>17年上</span><i class="fa fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <div class=" contents" >
+                            <ul class="root">
+                                <li class="list-item2">
+                                    <a class="actived" onclick="change_div('dynamicall')">
                                         <i class="fa fa-leaf"></i><span>全部</span><i class="fa fa-angle-right"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a index="2">
+                                    <a >
                                         <i class="fa fa-leaf"></i><span>17级</span><i class="fa fa-angle-right"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a index="3">
+                                    <a >
                                         <i class="fa fa-leaf"></i><span>16级</span><i class="fa fa-angle-right"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a index="4">
+                                    <a >
                                         <i class="fa fa-leaf"></i><span>15级</span><i class="fa fa-angle-right"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a index="5">
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>15级以前</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li class=" list-item">
+                            <a>
+                                <i class="fa fa-tasks"></i><span>16年下</span><i class="fa fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <div class=" contents" >
+                            <ul class="root">
+                                <li>
+                                    <a class="actived" onclick="change_div('dynamicall')">
+                                        <i class="fa fa-leaf"></i><span>全部</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>17级</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>16级</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a >
+                                        <i class="fa fa-leaf"></i><span>15级</span><i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a >
                                         <i class="fa fa-leaf"></i><span>15级以前</span><i class="fa fa-angle-right"></i>
                                     </a>
                                 </li>
@@ -415,19 +484,12 @@
 <!-- FlexSlider -->
 <link href="css/flexslider.css" rel='stylesheet' type='text/css'/>
 <script defer src="js/jquery.flexslider.js"></script>
-<script src="js/allResources.js"></script>
+<script src="js/allProject.js"></script>
+<script src="js/ACMshow.js"></script>
 <script type="text/javascript">
-    $(function () {
-        SyntaxHighlighter.all();
-    });
-    $(window).load(function () {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            start: function (slider) {
-                $('body').removeClass('loading');
-            }
-        });
-    });
+    window.onload = function main() {
+        Tabs(".list-item", ".contents", "list-item-checked", "contents-checked");
+    }
 </script>
 <!-- FlexSlider -->
 </body>

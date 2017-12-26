@@ -386,14 +386,10 @@ ol, ul {
     list-style: none;
     padding-left: 0px;
 }
-/*.west ul a:link,*/
-/*.west ul a:visited{*/
-/*color: #14191e;*/
-/*}*/
 .west ul li {
     height: 70px;
     border-bottom: 1px solid #EDF1F2;
-    width: 180px;
+    /*width: 180px;*/
     margin: 0 auto;
 }
 .west ul a.actived {
@@ -410,9 +406,6 @@ ol, ul {
 .peoplemain a:link, a:visited, body, html {
      color: #14191e;
  }
-/*:link, :visited, ins {*/
-    /*text-decoration: none;*/
-/*}*/
 .peoplemain a, button, input {
     outline: 0;
 }

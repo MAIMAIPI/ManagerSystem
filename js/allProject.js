@@ -29,6 +29,8 @@ function adaptiveHeight(obj) {
   /*	WEST
   /*----------------------------------*/
 
+
+
 // 书柜资源
 $(document).ready(function()
 {
