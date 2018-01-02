@@ -39,44 +39,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             );
         });
     </script>
-    <style>
-        #request-phone-code-btn {
-            cursor: pointer;
-            background: #fff;
-            border: 1px solid #c9c9c9;
-            font-size: 13px;
-            padding: 6px 15px;
-            border-radius: 3px;
-            -moz-border-radius: 3px;
-            -webkit-border-radius: 3px;
-            vertical-align: middle;
-        }
-        .vertifyCode .request-phone-code-input{
-            float: left;
-            width: 65%;
-            margin-left: 15px;
-            margin-right: 10px;
-            outline: none;
-            background-color: rgba(0, 0, 0, 0);
-            border: 1px solid #F2F2F2;
-            -webkit-box-shadow: none;
-            padding: 6px 12px;
-            color: #767676;
-            font-size: 14px;
-            line-height: 1.42857143;
-            transition: 200ms;
-            -webkit-transition: 200ms;
-            display: block;
-            height: 34px;
-            border-radius: 4px;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-        }
-        .vertifyCode #request-phone-code-btn{
-            float: left;
-            margin-left: 15px;
-            margin-top: 3px;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -149,7 +111,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="nav navbar-nav nav_1">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="allProject.html">项目管理</a></li>
-                <li><a href="#">ACM管理</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">ACM管理<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">刷题汇总</a></li>
+                        <li><a href="LearnACM.html">学习指导</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">读书管理</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">培训计划<span class="caret"></span></a>
@@ -196,8 +164,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <form class="login">
             <p class="lead">注册新账户</p>
             <div class="form-group">
-                <input type="text" autocomplete="off" class="required form-control" placeholder="昵称" name="Name"
+                <input type="text" autocomplete="off" class="required form-control" placeholder="真实姓名" name="Name"
                        value="">
+            </div>
+            <div class="form-group">
+                <input type="text" autocomplete="off" class="required form-control" placeholder="学号"
+                       name="username" value="">
+            </div>
+            <div class="form-group">
+                <input type="text" autocomplete="off" class="required form-control" placeholder="年级，比如2015"
+                       name="username" value="">
             </div>
             <div class="form-group">
                 <input type="text" autocomplete="off" class="required form-control" placeholder="手机号"
@@ -209,13 +185,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-group">
                 <input type="password" class="required form-control" placeholder="确认密码"
                        name="Conform Password" value="">
-            </div>
-            <div class="form-group">
-                <div class="row vertifyCode" style="margin-bottom: 0px">
-                        <input type="text" autocomplete="off" class="required request-phone-code-input" placeholder="验证码" name="messageCode"
-                               value="" style="float: left;">
-                        <input id="request-phone-code-btn"  type="submit" value="获取验证码">
-                </div>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary btn-lg1 btn-block" name="submit" value="Register">

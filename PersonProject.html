@@ -4,6 +4,7 @@
     <title>我的项目信息</title>
     <link rel="shortcut icon" href="images/logo.ico"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
@@ -25,6 +26,8 @@
 
     <!--Add-->
     <link type="text/css" href="css/ProjectInfo.css" rel="stylesheet">
+    <script src="js/bootstrap-wysiwyg.js"></script>
+    <script src="js/jquery.hotkeys.js"></script>
     <!--Add-->
     <script>
         $(document).ready(function () {
@@ -112,7 +115,13 @@
             <ul class="nav navbar-nav nav_1">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="allProject.html">项目管理</a></li>
-                <li><a href="#">ACM管理</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">ACM管理<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">刷题汇总</a></li>
+                        <li><a href="LearnACM.html">学习指导</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">读书管理</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">培训计划<span class="caret"></span></a>
@@ -230,9 +239,9 @@
                 <ul class="table-list">
                     <li class="clearfix">
                         <div class="Text">需求文档&nbsp;:</div>
-                        <div class="document"><p class="notice">请上传您的需求文档</p></div>
+                        <div class="document"><div class="notice">请上传您的需求文档</div></div>
                         <div class="UDload">
-                            <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>
+                            <a  class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>
                             <a class="download"><i class="fa fa-arrow-circle-o-down"></i></a>
                         </div>
                     </li>
@@ -478,19 +487,6 @@
 <!-- FlexSlider -->
 <link href="css/flexslider.css" rel='stylesheet' type='text/css'/>
 <script defer src="js/jquery.flexslider.js"></script>
-<script type="text/javascript">
-    $(function () {
-        SyntaxHighlighter.all();
-    });
-    $(window).load(function () {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            start: function (slider) {
-                $('body').removeClass('loading');
-            }
-        });
-    });
-</script>
 <script>
     $(function () {
         $('[data-toggle = "tooltip"]').tooltip();
