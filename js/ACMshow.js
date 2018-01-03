@@ -14,3 +14,4 @@ function Tabs(tabs_name, contents_name, tabs_checked_style, contents_checked_sty
         };
     }
 }
+
