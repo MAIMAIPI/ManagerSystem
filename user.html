@@ -11,25 +11,23 @@
     function hideURLbar() {
         window.scrollTo(0, 1);
     } </script>
-    <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css'/>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!--//main-->
+    <link rel="stylesheet" href="css/swipebox.css">
+    <!--//top-->
     <link href="css/style.css" rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="css/jquery.countdown.css"/>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-    <!----font-Awesome----->
-    <link rel="stylesheet" href="css/font-awesome.css">
-
-    <!--Add-->
-    <link href="css/user.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--js-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/move-top.js"></script>
     <script type="text/javascript" src="js/easing.js"></script>
-    <link rel="stylesheet" href="css/swipebox.css">
+
     <script src="js/bootstrap-wysiwyg.js"></script>
     <script src="js/jquery.hotkeys.js"></script>
-    <!--Add-->
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 
     <script>
         $(document).ready(function () {
@@ -75,7 +73,7 @@
                 <span class="icon-bar"></span>
             </button>
             <!--<a class="navbar-brand" href="index.html">JSUCCW LIBRARY</a>-->
-            <img src="images/logo.png" alt="创新创业工作室" class="img-responsive"
+            <img src="images/Slogo.png" alt="创新创业工作室" class="img-responsive"
                  style="height: 50px;width: 250px;margin-top: 5px">
         </div>
         <!--/.navbar-header-->
@@ -88,7 +86,7 @@
                     </a>-->
                     <ul class="dropdown-menu nav-head">
                         <li><a href="userinfo.html">个人中心</a></li>
-                        <li><a href="user.html">个人主页</a></li>
+                        <li><a href="#">个人主页</a></li>
                         <li><a href="#">退出登录</a></li>
                     </ul>
                 </li>
@@ -133,27 +131,30 @@
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
                 <li><a href="index.html">首页</a></li>
-                <li><a href="allProject.html">项目管理</a></li>
-                <li><a href="#">ACM管理</a></li>
+                <li><a href="LibraryIntroduce.html">项目管理</a></li>
+                <li><a href="ReaderService.html">ACM管理</a></li>
                 <li><a href="#">读书管理</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">培训计划<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">大一</a></li>
-                        <li><a href="#">大二</a></li>
-                        <li><a href="#">大三</a></li>
+                        <li><a href="terms.html">大一</a></li>
+                        <li><a href="shortcodes.html">大二</a></li>
+                        <li><a href="faq.html">大三</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">学习计划<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">大一</a></li>
-                        <li><a href="#">大二</a></li>
-                        <li><a href="#">大三</a></li>
+                        <li><a href="terms.html">大一</a></li>
+                        <li><a href="shortcodes.html">大二</a></li>
+                        <li><a href="faq.html">大三</a></li>
                     </ul>
                 </li>
-                <li><a href="#">日常考勤</a></li>
-                <li><a href="#">任务管理</a></li>
+                <li><a href="BuyBook.html">日常考勤</a></li>
+                <li><a href="WorkRoom.html">任务管理</a></li>
+                <!-- <li><a href="blog.html">其他</a></li>-->
+                <!--<li><a href="career.html">Career</a></li>
+                <li class="last"><a href="contact.html">Contacts</a></li>-->
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
@@ -162,7 +163,7 @@
     <div class="banner-info">
         <div class="container">
             <div class="col-md-4 header-left">
-                <img src="images/head.jpg" alt=""/>
+                <img src="images/img1.jpg" alt=""/>
             </div>
             <div class="col-md-8 header-right">
                 <h2>你好</h2>
@@ -276,13 +277,13 @@
             </div>
             <div class="item newcourse ">
                 <div class="myself">
-                    <img src="images/head.jpg" class="pic_myself">
+                    <img src="images/img1.jpg" class="pic_myself">
                     <span class="myname">灿烈</span>
                     <div class="time">2017-11-19</div>
                     <div class="state">开始该项目</div>
                 </div>
                 <div class="projectContent">
-                    <a href="PersonProject.html">
+                    <a href="#" target="_blank">
                         <img src="images/project2.jpg" class="bookpic" width="80" height="80">
                     </a>
                     <div class="content">
@@ -292,7 +293,7 @@
                             </div>
                         </div>
                         <div class="projectBody">
-                            <a href="PersonProject.html">
+                            <a href="" target=_blank>
                                 <div class="member">成员&nbsp;:&nbsp;<strong> 灿烈&nbsp;&nbsp;伯贤</strong></div>
                                 <div class="detail">该项目主要是为了让实验室的小伙伴们更好的能查阅到自己想看的数据...</div>
                             </a>
@@ -304,7 +305,7 @@
             </div>
             <div class="item newcourse ">
                 <div class="myself">
-                    <img src="images/head.jpg" class="pic_myself">
+                    <img src="images/img1.jpg" class="pic_myself">
                     <span class="myname">灿烈</span>
                     <div class="time">2017-11-19</div>
                     <div class="state">开始该项目</div>
@@ -332,7 +333,7 @@
             </div>
             <div class="item newcourse ">
                 <div class="myself">
-                    <img src="images/head.jpg" class="pic_myself">
+                    <img src="images/img1.jpg" class="pic_myself">
                     <span class="myname">灿烈</span>
                     <div class="time">2017-11-19</div>
                     <div class="state">开始该项目</div>
@@ -360,7 +361,7 @@
             </div>
             <div class="item newcourse ">
                 <div class="myself">
-                    <img src="images/head.jpg" class="pic_myself">
+                    <img src="images/img1.jpg" class="pic_myself">
                     <span class="myname">灿烈</span>
                     <div class="time">2017-11-19</div>
                     <div class="state">开始该项目</div>
@@ -418,8 +419,10 @@
                                             <i class="finish-num">66</i></span>
                                     </div>
                                     <div class="catog-points">
-                                        <span class=" ">刷题网址
-                                            <a href="https://leetcode.com/" target="_blank" class="problem-link">https://leetcode.com/</a></span>
+                                        <span class="i-left span-common"><a href="#">笔记:
+                                            <i class="note-num">0</i></a></span>
+                                        <span class="i-right span-common"><a href="#">问答:
+                                            <i class="qa-num">0</i></a></span>
                                         <a href="#" target="_blank" class="btn-red continute-btn">继续刷题</a>
                                     </div>
                                 </div>
@@ -454,8 +457,10 @@
                                             <i class="finish-num">66</i></span>
                                     </div>
                                     <div class="catog-points">
-                                        <span class=" "><a href="#">刷题网址
-                                            <a class="problem-link">https://leetcode.com/</a></a></span>
+                                        <span class="i-left span-common"><a href="#">笔记:
+                                            <i class="note-num">0</i></a></span>
+                                        <span class="i-right span-common"><a href="#">问答:
+                                            <i class="qa-num">0</i></a></span>
                                         <a href="#" target="_blank" class="btn-red continute-btn">继续刷题</a>
                                     </div>
                                 </div>
@@ -490,8 +495,10 @@
                                             <i class="finish-num">66</i></span>
                                     </div>
                                     <div class="catog-points">
-                                        <span class=" "><a href="#">刷题网址
-                                            <a class="problem-link">https://leetcode.com/</a></a></span>
+                                        <span class="i-left span-common"><a href="#">笔记:
+                                            <i class="note-num">0</i></a></span>
+                                        <span class="i-right span-common"><a href="#">问答:
+                                            <i class="qa-num">0</i></a></span>
                                         <a href="#" target="_blank" class="btn-red continute-btn">继续刷题</a>
                                     </div>
                                 </div>
@@ -526,8 +533,10 @@
                                             <i class="finish-num">66</i></span>
                                     </div>
                                     <div class="catog-points">
-                                        <span class=" "><a href="#">刷题网址
-                                            <a class="problem-link">https://leetcode.com/</a></a></span>
+                                        <span class="i-left span-common"><a href="#">笔记:
+                                            <i class="note-num">0</i></a></span>
+                                        <span class="i-right span-common"><a href="#">问答:
+                                            <i class="qa-num">0</i></a></span>
                                         <a href="#" target="_blank" class="btn-red continute-btn">继续刷题</a>
                                     </div>
                                 </div>
@@ -557,7 +566,7 @@
                     </div><!-- .share-box end -->
                 </div>
                 <a href="#" target="_blank">
-                    <img src="images/book.png" class="bookpic" width="40" height="40">
+                    <img src="images/books.png" class="bookpic" width="40" height="40">
                 </a>
                 <div class="content">
                     <div class="bookhead">
@@ -576,7 +585,7 @@
                                 </div>
                                 <div class="note-bottom">
                                     <div class="note-time">2017-11-11 11:11</div>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -599,7 +608,7 @@
                     </div><!-- .share-box end -->
                 </div>
                 <a href="#" target="_blank">
-                    <img src="images/book.png" class="bookpic" width="40" height="40">
+                    <img src="images/books.png" class="bookpic" width="40" height="40">
                 </a>
                 <div class="content">
                     <div class="bookhead">
@@ -618,7 +627,7 @@
                                 </div>
                                 <div class="note-bottom">
                                     <div class="note-time">2017-11-11 11:11</div>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -641,7 +650,7 @@
                     </div><!-- .share-box end -->
                 </div>
                 <a href="#" target="_blank">
-                    <img src="images/book.png" class="bookpic" width="40" height="40">
+                    <img src="images/books.png" class="bookpic" width="40" height="40">
                 </a>
                 <div class="content">
                     <div class="bookhead">
@@ -660,7 +669,7 @@
                                 </div>
                                 <div class="note-bottom">
                                     <div class="note-time">2017-11-11 11:11</div>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -683,7 +692,7 @@
                     </div><!-- .share-box end -->
                 </div>
                 <a href="#" target="_blank">
-                    <img src="images/book.png" class="bookpic" width="40" height="40">
+                    <img src="images/books.png" class="bookpic" width="40" height="40">
                 </a>
                 <div class="content">
                     <div class="bookhead">
@@ -702,7 +711,7 @@
                                 </div>
                                 <div class="note-bottom">
                                     <div class="note-time">2017-11-11 11:11</div>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -744,6 +753,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -776,6 +786,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -808,6 +819,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -842,6 +854,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -874,6 +887,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -906,6 +920,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -919,7 +934,7 @@
             </div>
             <div class="item newcourse ">
                 <a href="#" target="_blank">
-                    <img src="images/head.jpg" class="mypic">
+                    <img src="images/img1.jpg" class="mypic">
                 </a>
                 <div class="content">
                     <div class="myplan_head">
@@ -939,7 +954,7 @@
                                     <div class="plan-time">2017-03-03 03:03</div>
                                     <a class="btn btn-default plan-yes"><span
                                             class="glyphicon glyphicon-hourglass"></span>&nbsp;&nbsp;&nbsp;审核通过</a>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -949,7 +964,7 @@
             </div>
             <div class="item newcourse ">
                 <a href="#" target="_blank">
-                    <img src="images/head.jpg" class="mypic">
+                    <img src="images/img1.jpg" class="mypic">
                 </a>
                 <div class="content">
                     <div class="myplan_head">
@@ -969,7 +984,7 @@
                                     <div class="plan-time">2017-03-03 03:03</div>
                                     <a class="btn btn-default plan-wait"><span
                                             class="glyphicon glyphicon-hourglass"></span>&nbsp;&nbsp;&nbsp;审核中</a>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -979,7 +994,7 @@
             </div>
             <div class="item newcourse ">
                 <a href="#" target="_blank">
-                    <img src="images/head.jpg" class="mypic">
+                    <img src="images/img1.jpg" class="mypic">
                 </a>
                 <div class="content">
                     <div class="myplan_head">
@@ -999,7 +1014,7 @@
                                     <div class="plan-time">2017-03-03 03:03</div>
                                     <a class="btn btn-default plan-no"><span
                                             class="glyphicon glyphicon-hourglass"></span>&nbsp;&nbsp;&nbsp;审核不通过</a>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -1009,7 +1024,7 @@
             </div>
             <div class="item newcourse ">
                 <a href="#" target="_blank">
-                    <img src="images/head.jpg" class="mypic">
+                    <img src="images/img1.jpg" class="mypic">
                 </a>
                 <div class="content">
                     <div class="myplan_head">
@@ -1029,7 +1044,7 @@
                                     <div class="plan-time">2017-03-03 03:03</div>
                                     <a class="btn btn-default plan-wait"><span
                                             class="glyphicon glyphicon-hourglass"></span>&nbsp;&nbsp;&nbsp;审核中</a>
-                                    <a class="btn btn-default note-del"><span class="fa fa-times"></span>&nbsp;&nbsp;&nbsp;删除</a>
+                                    <a class="btn btn-default note-del"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;&nbsp;删除</a>
                                 </div>
                             </div>
                         </a>
@@ -1112,6 +1127,7 @@
         </div>
     </div>
 </div>
+<!--//footer-->
 
 <div id="newproject" class="modal fade " role="dialog" aria-hidden="true">
     <div class="modal-dialog ">
@@ -1125,7 +1141,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="Text">时间:</div>
+                        <div class="Text">时间&年级:</div>
                         <div class="Input">
                             <select id="status" class="form-control batch" onchange="" name="status">
                                 <option value="0">17年下15级</option>
@@ -1139,13 +1155,6 @@
                         <div class="Input">
                             <input type="text" class="form-control" name="projectname">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="Text">成员:</div>
-                        <div class="Input">
-                            <div class="projectMemberShow"></div>
-                        </div>
-                        <a class="addMember"><i class="fa fa-plus-square "></i></a>
                     </div>
                     <div class="row">
                         <div class="Text">说明<span>(可选)</span>:</div>
@@ -1256,7 +1265,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <textarea id="editor" class="form-control" style="height: 300px">请发表文明评论</textarea>
+                                    <div id="editor" class="form-control" style="height: 300px">请发表文明评论</div>
                                 </form>
                             </div>
                         </div>
@@ -1281,23 +1290,22 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="Text">学期:</div>
+                        <div class="Text">开始时间:</div>
                         <div class="Input">
-                            <input type="text" class="form-control" name="projectname">
+                            <input type="date">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="Text">成员:</div>
+                        <div class="Text">结束时间:</div>
                         <div class="Input">
-                            <div class="projectMemberShow"></div>
+                            <input type="date">
                         </div>
-                        <a class="addMember"><i class="fa fa-plus-square "></i></a>
                     </div>
                     <div class="row">
                         <div class="Text">说明<span>(可选)</span>:</div>
                         <div class="Input">
                             <textarea class="detail_textarea" maxlength="568" name="text" rows="3" cols="30"
-                                      style="color: rgb(34, 34, 34); width: 100%"></textarea>
+                                      style="color: rgb(34, 34, 34); width: 100% "></textarea>
                         </div>
                     </div>
                 </div>
@@ -1327,8 +1335,6 @@
     map['readingNotes'] = '#west6';
     map['myAttention'] = '#west7';
     map['myplan'] = '#west8';
-
-    map['show'] = '' ;
 
     function change_div(id) {
         document.getElementById(current).style.display = 'none';
