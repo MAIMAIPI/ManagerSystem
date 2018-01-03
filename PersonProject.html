@@ -185,7 +185,11 @@
                 </div>
             </div>
             <ul class="persons">
-                <h3>项目成员</h3>
+                <div class="personHead">
+                    <h3>项目成员</h3>
+                   <div class="add"><a data-toggle="modal" data-target="#addPerson"><i class="fa fa-plus"></i></a>&nbsp;<a data-toggle="modal" data-target="#addPerson">添加成员</a></div>
+                </div>
+                <div class="clearfix"></div>
                 <li>
                     <article class="person-item">
                         <div class="person-thumb pull-left">
@@ -481,6 +485,31 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
+<div id="addPerson" class="modal fade " role="dialog" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <form class="form-horizontal">
+                <div class="modal-header" style="background-color: #cfecee">
+                    <input type="button" value="&times;" class="close" data-dismiss="modal" aria-hidden="true">
+                    <div class="modal-title">
+                        <span class="fa fa-google-wallet" style="color: yellow"></span>&nbsp;&nbsp;添加成员
+                    </div>
+                </div>
+                <div class="modal-body" style="padding: 10px 20px">
+                    <div class="row">
+                        <div class="auto-search-group mt-3 ">
+                            <input type="text" name="identifier"  class="form-control input-block input-contrast auto-search-input new-member-field js-autocomplete-field" autofocus="" placeholder="搜索通过输入真实姓名，学号" autocomplete="off">
+                            <svg aria-hidden="true" class="octicon octicon-person" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 14.002a.998.998 0 0 1-.998.998H1.001A1 1 0 0 1 0 13.999V13c0-2.633 4-4 4-4s.229-.409 0-1c-.841-.62-.944-1.59-1-4 .173-2.413 1.867-3 3-3s2.827.586 3 3c-.056 2.41-.159 3.38-1 4-.229.59 0 1 0 1s4 1.367 4 4v1.002z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top: 0px">
+                    <input type="submit" class="btn btn-success" value="确认添加">
+                </div>
+            </form>
         </div>
     </div>
 </div>
