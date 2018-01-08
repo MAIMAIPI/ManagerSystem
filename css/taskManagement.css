@@ -1,0 +1,22 @@
+/*主要部分*/
+.taskManagement_main{
+    padding: 5em 0;
+}
+
+/*ACM弹框*/
+.weekPractice{
+    font-size: 18px ;
+    color: orange ;
+    margin-right: 18px;
+}
+#practiceContent .Text{
+    width: 30%;
+}
+#practiceContent .Input{
+    width: 60%;
+}
+
+/*ACM显示*/
+.taskManagement_main .project_list .table-list li > div.member_col{
+    width: 15%;
+}
