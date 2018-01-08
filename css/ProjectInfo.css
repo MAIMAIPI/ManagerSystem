@@ -410,6 +410,55 @@ svg:not(:root) {
     box-sizing: border-box;
 }
 
+/*项目建议*/
+.suggest{
+    border:1px solid #d1d5da;;
+    margin-bottom: 1em;
+}
+.suggest .project_suggest{
+    min-height: 200px;
+    height: auto;
+    outline: none;
+    border: 1px solid #d1d5da;;
+    overflow-y: auto;
+    font-weight: 400;
+    font-size:0.95em;
+    color:#777;
+    margin: 15px 15px 0px 15px;
+}
+
+.suggest .project-submit{
+    float: right;
+    line-height: 30px;
+    right: 10px;
+    margin-top: 10px;
+    bottom: 10px;
+}
+
+.suggest .suggest_btn{
+    margin: 0px 12px 10px 12px;
+}
+.project_edit{
+    margin-left: 8px;
+}
+.project_confirm{
+    float: right;
+    margin-right: 5px;
+}
+.project_edit,.project_confirm{
+    border: none;
+    background-color:#1077CC;
+    color: #ffffff;
+    line-height: 35px;
+    padding: 0 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    display: inline-block;
+    margin-top: 10px;
+    outline: none;
+}
+
 @media (max-width:1200px){
     ul.persons .personHead .add{
         float: left;

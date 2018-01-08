@@ -30,6 +30,7 @@
     <!--Add-->
     <script>
         $(document).ready(function () {
+            $.show_more_init();
             $(".dropdown").hover(
                 function () {
                     $('.dropdown-menu', this).stop(true, true).slideDown("fast");
@@ -89,6 +90,39 @@
                 })
             })
         });
+        $.extend({
+            show_more_init: function () {
+                var selector = $(".more_content");
+                selector.each(function () {
+                    var cur_status = "less";
+                    $(this).html($(this).text().trim());
+                    var charNumbers = $(this).text().length;//总字数
+                    var limit = 45;//显示字数
+                    if (charNumbers > limit) {
+                        var orgText = $(this).html();//原始文本
+                        var orgHeight = $(this).height();//原始高度
+                        var showText = orgText.substring(0, limit);//最终显示的文本
+                        $(this).html(showText);
+                        var contentHeight = $(this).height();//截取内容后的高度
+                        $(this).next().click(function () {
+                                if (cur_status == "less") {
+                                    $(this).prev().height(contentHeight).html(orgText);
+                                    $(this).html("收起");
+                                    cur_status = "more";
+                                } else {
+                                    $(this).prev().height(orgHeight).html(showText);
+                                    $(this).html("展开");
+                                    cur_status = "less";
+                                }
+                            }
+                        );
+                    }
+                    else {
+                        $(this).next().hide();
+                    }
+                });
+            }
+        });
     </script>
 </head>
 <body>
@@ -110,14 +144,14 @@
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="dropdown set_btn user-card-box">
-                   <!-- <a href="login.html"><i class="fa fa-user"></i><span>登录</span></a>-->
+                    <!-- <a href="login.html"><i class="fa fa-user"></i><span>登录</span></a>-->
                     <a id="header-avator" class="user-card-item js-header-avator">
                         <img width="40" height="40" src="images/head.jpg">
                     </a>
                     <ul class="dropdown-menu nav-head">
-                            <li><a href="userinfo.html">个人中心</a></li>
-                            <li><a href="user.html">个人主页</a></li>
-                            <li><a href="#">退出登录</a></li>
+                        <li><a href="userinfo.html">个人中心</a></li>
+                        <li><a href="user.html">个人主页</a></li>
+                        <li><a href="#">退出登录</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -165,7 +199,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">ACM管理<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">刷题汇总</a></li>
+                        <li><a href="ACMshow.html">刷题汇总</a></li>
                         <li><a href="LearnACM.html">学习指导</a></li>
                     </ul>
                 </li>
@@ -265,14 +299,14 @@
         <div class="col-sm-10 dropdown-buttons">
             <div class="col-sm-4 dropdown-button">
                 <div class="section_1">
-                   <!-- <select id="country" onChange="change_country(this.value)" class="frm-field required">-->
+                    <!-- <select id="country" onChange="change_country(this.value)" class="frm-field required">-->
                     <select id="sources" class="frm-field required">
                     </select>
                 </div>
             </div>
             <div class="col-sm-4 dropdown-button">
                 <div class="section_1">
-                    <select  id="contents" class="frm-field required">
+                    <select id="contents" class="frm-field required">
                     </select>
                 </div>
             </div>
@@ -319,7 +353,7 @@
                 <a href="#" class="read-more">更多</a>
             </div><!-- /.news-small -->
         </div>
-        <div class="col-md-8 grid_1_right">
+        <div class="col-md-8 grid_1_right" style="margin-bottom: 0">
             <h3>工作室通知</h3>
             <div class="but_list">
                 <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
@@ -352,7 +386,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">大二项目选题</a></h3>
-                                    <p>请大二的各位同学下载项目题目文档，从里面选择一个题目作为本次的项目题目，并创建好项目 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        请大二的各位同学下载项目题目文档，从里面选择傻子是个臭傻子傻子是个臭傻子一个题目作为本次的项目题目，并创建好项目 </p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -374,7 +410,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">大二项目选题</a></h3>
-                                    <p>请大二的各位同学下载项目题目文档，从里面选择一个题目作为本次的项目题目，并创建好项目 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        请大二的各位同学下载项目个题目作为本次的项目题目，并创建好项目 </p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -396,7 +434,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">大二项目选题</a></h3>
-                                    <p>请大二的各位同学下载项目题目文档，从里面选择一个题目作为本次的项目题目，并创建好项目 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        请大二的各位同位同学下载项目题目文档，从里面选择一位同学下载项目题目文档，从里面选择一位同学下载项目题目文档，从里面选择一位同学下载项目题目文档，从里面选择一位同学下载项目题目文档，从里面选择一学下载项目题目文档，从里面选择一个题目作为本次的项目题目，并创建好项目 </p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -420,7 +460,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">服创比赛</a></h3>
-                                    <p>明天开始进行服创比赛报名，请大家开始自行组队，然后报名 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        明天开始进行服创比赛报名，请大家开始自行组队，然后报名明天开始进行服创比赛报名，请大家开始自行组队，然后报名项目题目文档，从里面选择一学下载项目题目文档 </p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -441,7 +483,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">服创比赛</a></h3>
-                                    <p>明天开始进行服创比赛报名，请大家开始自行组队，然后报名 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                       然后报名项目题目文档，从里面选择一学下载项目题目文档 </p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -462,7 +506,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">服创比赛</a></h3>
-                                    <p>明天开始进行服创比赛报名，请大家开始自行组队，然后报名 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        明天开始进行服创比赛报名，请大家开傻傻吱吱始自行组队，然后报名明天开始进行服创比赛报名，请大家开始自行组队，然后报名项目题目文档，从里面选择一学下载项目题目文档 </p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -486,7 +532,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">需求分析更新</a></h3>
-                                    <p>刘先生的项目需求分析更新啦 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦</p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -507,7 +555,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">需求分析更新</a></h3>
-                                    <p>刘先生的项目需求分析更新啦 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        啊哈哈哈刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦</p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -528,7 +578,9 @@
                                 </div>
                                 <div class="event_right">
                                     <h3><a href="#">需求分析更新</a></h3>
-                                    <p>刘先生的项目需求分析更新啦 <a href="#">更多</a></p>
+                                    <p class="more_content" style="display: inline">
+                                        哇咔咔目需求分析更新啦刘先生的项目需求分析更新啦刘先生的项目需求分析更新啦</p>
+                                    <a class="more_switch" style="cursor: pointer">展开</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>

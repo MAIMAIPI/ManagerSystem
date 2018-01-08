@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>test</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        p{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script language="javascript">
+        var cur_status = "less";
+        $.extend({
+            show_more_init: function () {
+                var charNumbers = $(".content").html().length;//总字数
+                var limit = 10;//显示字数
+                if (charNumbers > limit) {
+                    var orgText = $(".content").html();//原始文本
+                    var orgHeight = $(".content").height();//原始高度
+                    var showText = orgText.substring(0, limit);//最终显示的文本
+                    $(".content").html(showText);
+                    var contentHeight = $(".content").height();//截取内容后的高度
+                    $(".switch").click(
+                        function () {
+                            if (cur_status == "less") {
+                                $(".content").height(contentHeight).html(orgText).animate({height: orgHeight}, {duration: "slow"});
+                                $(this).html("收起");
+                                cur_status = "more";
+                            } else {
+                                $(".content").height(orgHeight).html(showText).animate({height: contentHeight}, {duration: "fast"});
+                                $(this).html("展开");
+                                cur_status = "less";
+                            }
+                        }
+                    );
+                }
+                else {
+                    $(".switch").hide();
+                }
+            }
+        });
+        $(document).ready(function () {
+            $.show_more_init();
+        });
+    </script>
+</head>
+<body>
+<div id="limittext">
+    <p class="content" style="display: inline-block">是很长的一段文字，这是很长的一段文字，这是很长的一段文字，这是很长的一段文字，这是很长的一段文字，</p>
+    <a class="switch">展开</a>
+</div>
+</body>
+</html>

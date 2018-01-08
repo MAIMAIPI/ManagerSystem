@@ -1,0 +1,51 @@
+.ACMshow_main{
+    padding: 5em 0;
+}
+.ACMshow_main .table-header > div.name_col{
+    width: 14%;
+}
+.ACMshow_main .table-header .id_col{
+    width: 14%;
+}
+
+
+/*.ACMshow_main  .allNum_col{*/
+    /*width: 20%;*/
+/*}*/
+.ACMshow_main .project_list .table-list li > div.id_col{
+    width: 14%;
+}
+.ACMshow_main .table-list li > div.name_col{
+    width: 15%;
+}
+.ACMshow_main .table-header > div {
+    padding: 15px 10px;
+    font-size: 15px;
+}
+.ACMshow_main .table-list li > div{
+    padding: 15px 8px;
+}
+.ACMshow_main .table-list a:hover{
+    color: #ffffff;
+}
+.ACMshow_main .project_list .table-header > div.member_col {
+    width: 9%;
+}
+.ACMshow_main .project_list .table-list li > div.member_col {
+    width: 9%;
+}
+
+/*切换DIV*/
+.contents{
+    z-index: 0;
+    opacity: 0;
+   display: none;
+}
+.contents-checked{
+    display: block;
+    z-index: 1;
+    opacity: 1;
+}
+.list-item-checked{
+    background-color: blue;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>我的项目信息</title>
+    <title>项目</title>
     <link rel="shortcut icon" href="images/logo.ico"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,7 @@
 
     function hideURLbar() {
         window.scrollTo(0, 1);
-    }
-    </script>
+    } </script>
     <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css'/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -42,6 +41,18 @@
                 }
             );
         });
+        var times=0;
+        function change() {
+            if (times % 2 == 0) {
+                document.getElementById("project-suggest").contentEditable = true;
+                $("#suggest_edit").val("取消编辑");
+            }
+            if (times % 2 == 1) {
+                document.getElementById("project-suggest").contentEditable = false;
+                $("#suggest_edit").val("编辑");
+            }
+            times++;
+        }
     </script>
 </head>
 <body>
@@ -148,7 +159,7 @@
 <!-- banner -->
 <div class="courses_banner">
     <div class="container">
-        <h3>我的项目信息</h3>
+        <h3>项目答辩</h3>
         <p class="description">
             Welcome to join JSUCCW! Here we will meet a group of like-minded students,
             grow together, learn professional knowledge, I hope everyone here can meet better myself. Finally, I wish
@@ -157,7 +168,7 @@
         <div class="breadcrumb1">
             <ul>
                 <li class="icon6"><a href="index.html">首页</a></li>
-                <li class="current-page">我的项目信息</li>
+                <li class="current-page">项目答辩</li>
             </ul>
         </div>
     </div>
@@ -185,11 +196,7 @@
                 </div>
             </div>
             <ul class="persons">
-                <div class="personHead">
-                    <h3>项目成员</h3>
-                   <div class="add"><a data-toggle="modal" data-target="#addPerson"><i class="fa fa-plus"></i></a>&nbsp;<a data-toggle="modal" data-target="#addPerson">添加成员</a></div>
-                </div>
-                <div class="clearfix"></div>
+                <h3>项目成员</h3>
                 <li>
                     <article class="person-item">
                         <div class="person-thumb pull-left">
@@ -229,57 +236,68 @@
             </ul>
             <div class="projectSummarize">
                 <h3>项目总结</h3>
-                <div class="project_sumup" contenteditable="true">
-                    你对自己的项目有些什么感悟呢？
+                <div class="project_sumup">
+                    在这个项目中，我学会了项目的整个流程，以及前后端交互。
                 </div>
-                <input type="submit" value="确认" class="project-submit">
             </div>
         </div>
         <div class="col-md-9">
             <div class="project_list">
+                <div class="table-header clearfix">
+                    <div class="project_request">项目建议</div>
+                </div>
+                <div class="suggest">
+                    <p class="project_suggest"id="project-suggest">
+                        你对自己的项目有些什么感悟呢？
+                    </p>
+                    <div class="suggest_btn clearfix">
+                        <input type="button" class="project_edit" id="suggest_edit" value="编辑"onclick="change()"/>
+                        <input type="submit" class="project_confirm" value="确认"/>
+                    </div>
+                </div>
                 <div class="table-header clearfix">
                     <div class="project_request">项目要求</div>
                 </div>
                 <ul class="table-list">
                     <li class="clearfix">
                         <div class="Text">需求文档&nbsp;:</div>
-                        <div class="document"><div class="notice">请上传您的需求文档</div></div>
+                        <div class="document"><p class="notice">需求分析.doc</p></div>
                         <div class="UDload">
-                            <a  class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>
+                            <!-- <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>-->
                             <a class="download"><i class="fa fa-arrow-circle-o-down"></i></a>
                         </div>
                     </li>
                     <li class="clearfix">
                         <div class="Text">功能点和技术点&nbsp;:</div>
-                        <div class="document"><p class="notice">请上传您的功能点和技术点文档</p></div>
+                        <div class="document"><p class="notice">功能点和技术点.txt</p></div>
                         <div class="UDload">
-                            <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>
+                            <!-- <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>-->
                             <a class="download"><i class="fa fa-arrow-circle-o-down"></i></a>
                         </div>
                     </li>
                     <li class="clearfix GTpic">
                         <div class="addPic"><img src="images/addPic.png" style="width: 80px"></div>
-                        <div class="picShow"><p class="notice">请上传您的甘特图</p></div>
+                        <!--<div class="picShow"><p class="notice">请上传您的甘特图</p></div>-->
                         <div class="UDload">
-                            <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>
+                            <!-- <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>-->
                             <a class="download"><i class="fa fa-arrow-circle-o-down"></i></a>
                         </div>
                     </li>
                     <li class="clearfix">
                         <div class="Text col-xs-2">Github链接&nbsp;:</div>
-                        <div class="link col-xs-9"><input type="text" placeholder="请上传您的Github链接" style="width: 100%"></div>
-                        <div class="UDload col-xs-1">
+                        <div class="link col-xs-9"><input type="text" placeholder="https://github.com/MuxinKrismile/ManagerSystem" style="width: 100%" readonly="readonly"></div>
+                        <!--<div class="UDload col-xs-1">
                             <a class="upload"><i class="fa fa-arrow-circle-o-up"></i></a>
-                        </div>
+                        </div>-->
                     </li>
                 </ul>
                 <section class="reviews mod book-content">
                     <header>
                         <div class="table-header clearfix">
-                            <div class="comment">项目评论区</div>
-                            <!--<a href="#write-comment" class="create-review btn  redbutt rr">
+                            <div class="comment">评论打分</div>
+                            <a href="#write-comment" class="create-review btn  redbutt rr">
                                 <span>我要打分</span>
-                            </a>-->
+                            </a>
                         </div>
 
                     </header>
@@ -368,7 +386,6 @@
                     </div>
                     <p class="pl">><a href="#">更多评论</a></p>
                 </section>
-
                 <div class="panel panel-default" id="write-comment">
                     <div class="panel-heading">
                         <h3 class="panel-title">
@@ -377,6 +394,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-horizontal">
+                            <div>
+                                <div class="give-grade col-xs-1">分数:</div><input type="text" class="input-grade col-xs-11" placeholder="请输入您给予的分数    (0-100)" >
+                            </div>
                             <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
                                 <div class="btn-group">
                                     <a class="btn btn-default" data-edit="italic" title="斜体">
@@ -485,31 +505,6 @@
                 </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
-<div id="addPerson" class="modal fade " role="dialog" aria-hidden="true">
-    <div class="modal-dialog ">
-        <div class="modal-content">
-            <form class="form-horizontal">
-                <div class="modal-header" style="background-color: #cfecee">
-                    <input type="button" value="&times;" class="close" data-dismiss="modal" aria-hidden="true">
-                    <div class="modal-title">
-                        <span class="fa fa-google-wallet" style="color: yellow"></span>&nbsp;&nbsp;添加成员
-                    </div>
-                </div>
-                <div class="modal-body" style="padding: 10px 20px">
-                    <div class="row">
-                        <div class="auto-search-group mt-3 ">
-                            <input type="text" name="identifier"  class="form-control input-block input-contrast auto-search-input new-member-field js-autocomplete-field" autofocus="" placeholder="搜索通过输入真实姓名，学号" autocomplete="off">
-                            <svg aria-hidden="true" class="octicon octicon-person" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 14.002a.998.998 0 0 1-.998.998H1.001A1 1 0 0 1 0 13.999V13c0-2.633 4-4 4-4s.229-.409 0-1c-.841-.62-.944-1.59-1-4 .173-2.413 1.867-3 3-3s2.827.586 3 3c-.056 2.41-.159 3.38-1 4-.229.59 0 1 0 1s4 1.367 4 4v1.002z"></path></svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer" style="margin-top: 0px">
-                    <input type="submit" class="btn btn-success" value="确认添加">
-                </div>
-            </form>
         </div>
     </div>
 </div>
